@@ -40,10 +40,10 @@ body {
 }
 
 header h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 18px;
+    font-family: 'VT323', monospace;
+    font-size: 28px;
     color: var(--primary-btn);
-    margin-bottom: 32px;
+    margin-bottom: 0;
     text-shadow: 2px 2px 0 var(--accent);
 }
 
@@ -64,6 +64,15 @@ header h1 {
     height: 100%;
 }
 
+.save-hint {
+    font-family: 'VT323', monospace;
+    font-size: 12px;
+    color: var(--text-color);
+    margin-top: 4px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+
 .controls {
     display: flex;
     gap: 16px;
@@ -72,8 +81,8 @@ header h1 {
 }
 
 .btn {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
     padding: 16px 24px;
     border: none;
     border-radius: 4px;
@@ -147,4 +156,17 @@ header h1 {
     header h1 {
         font-size: 24px;
     }
+}
+
+footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-family: 'VT323', monospace;
+    font-size: 10px;
+    color: var(--text-color);
+    opacity: 0.6;
 }

@@ -374,6 +374,33 @@ function loadAvatarFromURL() {
 
 document.getElementById('shareBtn').addEventListener('click', shareAvatar);
 
+let touchTimer;
+const avatarGrid = document.getElementById('avatarGrid');
+
+avatarGrid.addEventListener('touchstart', function(e) {
+    touchTimer = setTimeout(() => {
+        saveAvatar();
+        touchTimer = null;
+    }, 500);
+});
+
+avatarGrid.addEventListener('touchend', function() {
+    if (touchTimer) {
+        clearTimeout(touchTimer);
+    }
+});
+
+avatarGrid.addEventListener('touchmove', function() {
+    if (touchTimer) {
+        clearTimeout(touchTimer);
+    }
+});
+
+avatarGrid.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    saveAvatar();
+});
+
 if (!loadAvatarFromURL()) {
     generateAvatar();
 }
